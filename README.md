@@ -11,6 +11,7 @@ Currently not totally functional and moderately to not at all useful. Modificati
 - Earnestly, the entirety of the proxmark3 firmware needs to be dumped and rewritten; pending my learning more about FPGAs
 
 User-space currently:
+- ONLY REQUIRES LIBUSB not wonky linux modem drivers (this layer needs to be rewritten)
 - Provides fully drivable, active and passive ISO-1443a support
 - In process of providing 7816 layer support
 - In process of providing NXP propietary extensions support
