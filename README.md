@@ -1,7 +1,7 @@
 # proxmark3-modifications
 Rewrite of some of the firemware and entirely new userspace iso1443a toolchain.
 
-There is some weird DMA/ARM bug present in the stock proxmark3 firmware that only exhibits itself around USB transfers where one stalls a subsequent one that I was in the process of sorting out; unfortunately, I have a psychotic ex that forced my attention to her. Apparently my working on this made some people nervous. I only wish this wasn't true.
+There is some weird DMA/ARM bug present in the stock proxmark3 firmware that only exhibits itself around USB transfers where one stalls a subsequent one that I was in the process of sorting out; strangely, i could not seem to find a manual for the processor online ... unfortunately, I have a psychotic ex that forced my attention to her and her tampering would be far more impressive did she not misuse physical access. Apparently my working on this made some people nervous. I only wish this wasn't true.
 
 Currently not totally functional and moderately to not at all useful. Modifications to the proxmark firmware add a couple of new modes of operation, primarily included is functionality to:
 
