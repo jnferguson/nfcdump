@@ -21,3 +21,4 @@ User-space currently:
 
 Project is currently stalled due to real life SNAFUs; currently only usable to sniff real transactions and dump the full packets and not the translation the stock firmware provides; by full I mean you can elect to receive the data still manchester/miller encoding which allows for unique issues "other security researchers" have ignored as unimportant or too simple to have bugs, of particular note is that ISO-1443A is a seriously fucked up protocol and has implicit assumptions about the anti-collision sequence, by allowing an application to drive the encoding and decoding, you can introduce collisions and encoding errors that were not previously possible with the stock firmware or any other tools to the best of my knowledge.
 
+(multiple; i cant recall, when that didnt suffice a strange ARM cache coherency issue appeared with no apparent cause)
