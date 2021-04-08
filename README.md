@@ -1,8 +1,6 @@
 # proxmark3-modifications
 Rewrite of some of the firemware and entirely new userspace iso1443a toolchain.
 
-There is some weird DMA/ARM bug present in the stock proxmark3 firmware that only exhibits itself around USB transfers where one stalls a subsequent one that I was in the process of sorting out; strangely, i could not seem to find a manual for the processor online ... unfortunately, I have a psychotic ex that forced my attention to her and her tampering would be far more impressive did she not misuse physical access. Apparently my working on this made some people nervous. I only wish this wasn't true.
-
 Currently not totally functional and moderately to not at all useful. Modifications to the proxmark firmware add a couple of new modes of operation, primarily included is functionality to:
 
 - Provide ISO-1443a PCD functionality with full driving and dump capability over USB; modulated and unmodulated signal dumps available
@@ -19,6 +17,6 @@ User-space currently:
 - In process of providing NXP propietary extensions support
 - Idea was to write code in a portable manner that would support more than just the proxmark and provide a generic fuzzing framework for NFC devices (Your phone is the LEAST important thing that uses this technology); due to offline issues, code quality suffered and needs to be refactored to better meet this goal
 
-Project is currently stalled due to real life SNAFUs; currently only usable to sniff real transactions and dump the full packets and not the translation the stock firmware provides; by full I mean you can elect to receive the data still manchester/miller encoding which allows for unique issues "other security researchers" have ignored as unimportant or too simple to have bugs, of particular note is that ISO-1443A is a seriously fucked up protocol and has implicit assumptions about the anti-collision sequence, by allowing an application to drive the encoding and decoding, you can introduce collisions and encoding errors that were not previously possible with the stock firmware or any other tools to the best of my knowledge.
+Project is currently stalled due to real life SNAFUs; currently only usable to sniff real transactions and dump the full packets and not the translation the stock firmware provides; by full I mean you can elect to receive the data still manchester/miller encoding, of particular note is that ISO-1443A is a seriously fucked up protocol and has implicit assumptions about the anti-collision sequence, by allowing an application to drive the encoding and decoding, you can introduce collisions and encoding errors that were not previously possible with the stock firmware or any other tools to the best of my knowledge.
 
-(multiple; i cant recall, when that didnt suffice a strange ARM cache coherency issue appeared with no apparent cause)
+(self-note: multiple; i cant recall, when that didnt suffice a strange ARM cache coherency issue appeared with no apparent cause)
